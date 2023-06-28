@@ -126,7 +126,7 @@ function loadModel(url){
 
     // Create a boundingBox for tracking the full position of the model
     const boundingBox = new THREE.Box3().setFromObject(gltf.scene); // .setFromObject([your_object])
-	  const size = boundingBox.getSize(new THREE.Vector3()); // Get the sizes of the objects
+	const size = boundingBox.getSize(new THREE.Vector3()); // Get the sizes of the objects
     /* Stick the floor to the object */
     // Set the Y position of the floor as the minimum position of the current object
     plane.position.y = boundingBox.min.y - 0.001; // Floor Y position = currentModel minimum Y - 0.001 
@@ -239,35 +239,35 @@ const iconBtns = document.querySelectorAll('.icon-controls'); // Select all cont
 const playBtn = document.getElementById('play-icon'); // Select the play icon in controls
 
 var currentlyPlaying = false; // Set the if there is default rotation
-// Creating an event listener for each button
+// Creating an event listener for each control button
 iconBtns.forEach(function(element){ 
-  element.addEventListener('click', function(){
-    switch (element.title) {
+  element.addEventListener('click', function(){ // Depending of wich element is clicked, will do a different thing
+    switch (element.title) { // element.title == The title that has every control button
       case 'Rotate left':
-        rotateLeft();
+        rotateLeft(); // Rotates the object to left
         break;
       case 'Rotate right':
-        rotateRight();
+        rotateRight(); // Rotates the object to right
         break;
       case 'Zoom in':
         camera.position.y -= distanceY;
-        zoom();
+        zoom(); // Activates the zoom
         break;
       case 'Zoom out':
         camera.position.y += distanceY;
-        zoom();
+        zoom(); // Activates the zoom
         break;
       case 'Play':
-        if(!currentlyPlaying){
-          rotateAnimation();
+        if(!currentlyPlaying){ // Check if the object is already rotating
+          rotateAnimation(); // Calls the function for rotate
         }
-        playBtn.style.color = '#3b5e9c';
-        currentlyPlaying = true;
+        playBtn.style.color = '#3b5e9c'; // Change the play button to another for knowing that the button has been clicked
+        currentlyPlaying = true; // Set the object motion to currently rotating
         break;
       case 'Pause':
-        cancelAnimationFrame(animation);
-        currentlyPlaying = false;
-        playBtn.style.color = '#000000';
+        cancelAnimationFrame(animation); // Cancels the rotation animation
+        currentlyPlaying = false; // Change the object motion to currently not rotating
+        playBtn.style.color = '#000000'; // Reset the color of the play button
         break;
       default:
         break;

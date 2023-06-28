@@ -1,8 +1,8 @@
 
 /* Clear all formats */
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0; /* Removes spaces between objects */
+    margin: 0; /* Removes spaces between objects */
 }
 /* Navigation bar logo */
 #nav-logo{
@@ -77,35 +77,34 @@
     left: 50%; /* Custom position */
     transform: translate(-50%, -50%); /* Center the content */
 }
-
+/* Where all the controls are displayed */
 #canvas-controls {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* border: 1px solid black; */
-    width: 200px;
-    height: fit-content;
+    position: absolute; /* Position above */
+    top: 85%; /* Custom position */
+    left: 50%; /* Custom position */
+    transform: translate(-50%, -50%); /* Center the content */
+    width: 200px; /* Custom position */
+    height: fit-content; /* Fit the height to the content */
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row; /* Display all the content horizontally */
+    justify-content: space-between; /* The space between the control buttons */
 }
-.fa-solid:hover{
-    color: #3b5e9c;
-    transform: scale(1.2);
-}
-
+/* Icons properties */
 .fa-solid{
-    font-size: x-large;
-    cursor: pointer;
-    transition: transform .1s;
+    font-size: x-large; /* Custom size */
+    cursor: pointer; /* Change the cursor to pointer */
+    transition: transform .1s; /* Transition for later hovering and scaleing */
 }
-
+/* When hover an icon */
+.fa-solid:hover{
+    color: #3b5e9c; /* Change color */
+    transform: scale(1.2); /* Re-scale so it gives an effect of getting bigger when hovering */
+}
+/* Close button */
 #close-btn{
-     /* border: 1px solid black; */
-    position: absolute;
-    top: 0;
-    right: 0;
-    --font-size: 42px;
-    padding: 20px;
+    position: absolute;  /* Position above */
+    top: 0; /* Place on top of the parent window */
+    right: 0; /* Moves to right, so it will place in top-right corner of the window */
+    font-size: 42px; /* Custom size */
+    padding: 20px; /* Adding some space for not sticking the icon to the corner */
 }
