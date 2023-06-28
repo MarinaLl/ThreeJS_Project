@@ -1,0 +1,111 @@
+
+/* Clear all formats */
+*{
+    padding: 0;
+    margin: 0;
+}
+/* Navigation bar logo */
+#nav-logo{
+    width: 300px; /* Custom size */
+}
+/* Contents all the sections in the page */
+#container{
+    width: 100%; /* Custom size */
+    height: 100vh; /* Custom size */
+    display: flex;
+    flex-direction: column; /* Shows content vertically */
+    align-items: center; /* Center the content */
+}
+/* Section where all the contents are displayed */
+.section-containers{
+    width: 60%; /* Custom size */
+}
+/* Initial letters from paragraphs */
+.initial-letters{
+    text-transform: uppercase; /* Change lowercase to uppercase */
+    color: rgb(196, 33, 33); /* Letters color */
+    font-size: x-large; /* Letter size */
+}
+/* Contents the images and texts from sections */
+.content{
+    display: flex;
+    flex-direction: row; /* Shows items horizontally*/ 
+}
+/* Image preview of the 3D models */
+.model-preview{
+    width: 200px; /* Custom size */
+    margin: 10px; /* Custom size */
+}
+/* When mouse hover section images */
+.model-preview:hover{
+  cursor: pointer; /* Change cursor status to pointer */
+}
+/* Section titles*/
+.section-title{
+    font-family: 'Mulish', sans-serif; /* Letter type */
+    text-align: center;
+}
+/* Section texts */
+.section-text{
+    font-family: 'Poppins', sans-serif; /* Letter type */
+    text-align: justify;
+}
+/* PopUp window */
+#popup {
+    display: none; /* not showing on screen */
+    position: fixed; /* fix the screen [cannot move scrolling] */
+    top: 0; 
+    left: 0;
+    width: 100%; /* Full screen */
+    height: 100%; /* Full screen */
+    background: rgba(0, 0, 0, 0.8); /* Custon background color */
+    z-index: 9999; /* Priority position */
+}
+/* Loading image when a model is loading */
+#loader { 
+    width: 100px; /* Custom size */
+    position: absolute; /* Position above */
+    top: 50%; /* Custom position */
+    left: 50%; /* Custom position */
+    z-index: 9999; /* Priority position */
+    transform: translate(-50%, -50%); /* Center the content */
+}
+/* Canvas where the models are rendered */
+#canvas-container {
+    position: absolute; /* Position above */
+    top: 50%; /* Custom position */
+    left: 50%; /* Custom position */
+    transform: translate(-50%, -50%); /* Center the content */
+}
+
+#canvas-controls {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid black; */
+    width: 200px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.fa-solid:hover{
+    color: #3b5e9c;
+    transform: scale(1.2);
+}
+
+.fa-solid{
+    font-size: x-large;
+    cursor: pointer;
+    transition: transform .1s;
+}
+
+#close-btn{
+     /* border: 1px solid black; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    --font-size: 42px;
+    padding: 20px;
+}
