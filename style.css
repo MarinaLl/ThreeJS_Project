@@ -40,7 +40,7 @@
 .model-preview:hover{
   cursor: pointer; /* Change cursor status to pointer */
 }
-/* Section titles*/
+/* Section titles */
 .section-title{
     font-family: 'Mulish', sans-serif; /* Letter type */
     text-align: center;
@@ -50,15 +50,15 @@
     font-family: 'Poppins', sans-serif; /* Letter type */
     text-align: justify;
 }
-/* PopUp window */
+/* PopUp window (black screen) */
 #popup {
     display: none; /* not showing on screen */
-    position: fixed; /* fix the screen [cannot move scrolling] */
+    position: fixed; /* fix the screen [cannot move while scrolling] */
     top: 0; 
     left: 0;
     width: 100%; /* Full screen */
     height: 100%; /* Full screen */
-    background: rgba(0, 0, 0, 0.8); /* Custon background color */
+    background: rgba(0, 0, 0, 0.8); /* background color */
     z-index: 9999; /* Priority position */
 }
 /* Loading image when a model is loading */
@@ -70,7 +70,7 @@
     z-index: 9999; /* Priority position */
     transform: translate(-50%, -50%); /* Center the content */
 }
-/* Canvas where the models are rendered */
+/* Canvas where the models are rendered (white screen when popup) */
 #canvas-container {
     position: absolute; /* Position above */
     top: 50%; /* Custom position */
@@ -80,16 +80,17 @@
 /* Where all the controls are displayed */
 #canvas-controls {
     position: absolute; /* Position above */
-    top: 85%; /* Custom position */
     left: 50%; /* Custom position */
+    bottom: 0; /* Custom position */
+    margin-bottom: 10px;
     transform: translate(-50%, -50%); /* Center the content */
-    width: 200px; /* Custom position */
+    width: 350px; /* Custom position */
     height: fit-content; /* Fit the height to the content */
     display: flex;
     flex-direction: row; /* Display all the content horizontally */
     justify-content: space-between; /* The space between the control buttons */
 }
-/* Icons properties */
+/* Control Icons properties */
 .fa-solid{
     font-size: x-large; /* Custom size */
     cursor: pointer; /* Change the cursor to pointer */
@@ -100,7 +101,7 @@
     color: #3b5e9c; /* Change color */
     transform: scale(1.2); /* Re-scale so it gives an effect of getting bigger when hovering */
 }
-/* Close button */
+/* PopUp close button */
 #close-btn{
     position: absolute;  /* Position above */
     top: 0; /* Place on top of the parent window */

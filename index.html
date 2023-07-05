@@ -83,7 +83,7 @@
             <h1 class="section-title">VISUALIZATION ROTATED 360º</h1>
             <div class="content">
                 <!-- The ID of the image NEEDS to have the SAME NAME as the 3D MODEL [REQUIRED] -->
-                <img  id="MH004_Clock_1" class="model-preview" src="public/model_previews/MH004_Clock_1.PNG" alt="clock01-preview">
+                <img  id="MH004_Clock_1" class="model-preview hola" src="public/model_previews/MH004_Clock_1.PNG" alt="clock01-preview">
                 <div>
                     <p class="section-text"><span class="initial-letters">j </span>It is the best visualization, thanks to which you can show the customer the product in its entirety. The ability to rotate it is an extremely attractive aspect. A large part of society, when looking for a product for themselves, likes when there is something other than an ordinary image on the website.</p>
                     <p class="section-text">Such a visualization can be freely zoomed in and out. In this case, adding descriptions to specific parts of the furniture and describing the material or adjustment options will also work well.</p>
@@ -100,24 +100,50 @@
                     <p class="section-text">Such a visualization can be freely zoomed in and out. In this case, adding descriptions to specific parts of the furniture and describing the material or adjustment options will also work well.</p>
                 </div>
             </div>
+        </section>  
+        <section class="section-containers">
+            <h1 class="section-title">VISUALIZATION ROTATED 360º</h1>
+            <div class="content">
+                <!-- The ID of the image NEEDS to have the SAME NAME as the 3D MODEL [REQUIRED] -->
+                <img  id="Fridge_Animation4" class="model-preview" src="public/model_previews/Refrigerator_preview.a500fb08.png" alt="fridge-preview">
+                <div>
+                    <p class="section-text"><span class="initial-letters">j </span>It is the best visualization, thanks to which you can show the customer the product in its entirety. The ability to rotate it is an extremely attractive aspect. A large part of society, when looking for a product for themselves, likes when there is something other than an ordinary image on the website.</p>
+                    <p class="section-text">Such a visualization can be freely zoomed in and out. In this case, adding descriptions to specific parts of the furniture and describing the material or adjustment options will also work well.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section-containers">
+            <h1 class="section-title">VISUALIZATION ROTATED 360º</h1>
+            <div class="content">
+                <!-- The ID of the image NEEDS to have the SAME NAME as the 3D MODEL [REQUIRED] -->
+                <img  id="Nordic_Table_Anm" class="model-preview" src="public/model_previews/nordicTable.png" alt="nordic-table-preview">
+                <div>
+                    <p class="section-text"><span class="initial-letters">j </span>It is the best visualization, thanks to which you can show the customer the product in its entirety. The ability to rotate it is an extremely attractive aspect. A large part of society, when looking for a product for themselves, likes when there is something other than an ordinary image on the website.</p>
+                    <p class="section-text">Such a visualization can be freely zoomed in and out. In this case, adding descriptions to specific parts of the furniture and describing the material or adjustment options will also work well.</p>
+                </div>
+            </div>
         </section>
     </div>
     <div id="popup">
         <!-- Loading screen -->
         <img id="loader" src="public/img/loadingGreen.gif" alt="loading">
         <!-- The 3D Models are going to be rendered here -->
-        <div id="canvas-container"><i id="close-btn" class="fa-solid fa-xmark"></i></div>
-        <!-- Controls inside the canvas of the rendered model -->
-        <div id="canvas-controls">
-            <i title="Rotate left" id="rotate-left-icon" class="icon-controls fa-solid fa-rotate-left"></i>
-            <i title="Rotate right" id="rotate-right-icon" class="icon-controls fa-solid fa-rotate-right"></i>
-            <i title="Zoom in" id="zoom-in-icon" class="icon-controls fa-solid fa-magnifying-glass-plus"></i>
-            <i title="Zoom out" id="zoom-out-icon" class="icon-controls fa-solid fa-magnifying-glass-minus"></i>
-            <i title="Play" id="play-icon" class="icon-controls fa-solid fa-play"></i>
-            <i title="Pause" id="pause-icon" class="icon-controls fa-solid fa-pause"></i>
+        <div id="canvas-container">
+            <i id="close-btn" class="fa-solid fa-xmark"></i>
+            <!-- 3D Model controls (rotation, zoom, animations) -->
+            <div id="canvas-controls">
+                <i title="Rotate left" id="rotate-left-icon" class="icon-controls fa-solid fa-rotate-left"></i>
+                <i title="Rotate right" id="rotate-right-icon" class="icon-controls fa-solid fa-rotate-right"></i>
+                <i title="Zoom in" id="zoom-in-icon" class="icon-controls fa-solid fa-magnifying-glass-plus"></i>
+                <i title="Zoom out" id="zoom-out-icon" class="icon-controls fa-solid fa-magnifying-glass-minus"></i>
+                <i title="Play" id="play-icon" class="icon-controls fa-solid fa-play"></i>
+                <i title="Pause" id="pause-icon" class="icon-controls fa-solid fa-pause"></i>
+            </div>
         </div>
     </div>
+    <!-- Icons script [REQUIRED] -->
     <script src="https://kit.fontawesome.com/9a5b7e0398.js" crossorigin="anonymous"></script>
+    <!-- 3D Model loader script -->
     <script type="module" src="main.js"></script>
 </body>
 </html>
